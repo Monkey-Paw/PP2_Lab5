@@ -1,0 +1,159 @@
+1st task
+
+import re
+
+with open("row.txt", "r",  encoding="utf8") as myfile:
+    data = myfile.read().splitlines()
+    
+    
+def text_match(text):
+        patterns = '^a(b*)$'
+        if re.search(patterns,  text):
+                return 'Found a match!'
+        else:
+                return('Not matched!')
+
+for line in data:
+        print(text_match(line))
+ 
+
+
+2nd task
+
+
+import re
+
+with open("row.txt", "r",  encoding="utf8") as myfile:
+    data = myfile.read().splitlines()
+
+def text_match(text):
+        patterns = 'ab{2,3}'
+        if re.search(patterns,  text):
+                return 'Found a match!'
+        else:
+                return('Not matched!')
+
+for line in data:
+        print(text_match(line))
+
+
+
+
+3rd task
+
+
+
+import re
+
+with open("row.txt", "r",  encoding="utf8") as myfile:
+    data = myfile.read().splitlines()
+
+def text_match(text):
+        patterns = '[a-z_][a-z_]*'
+        if re.search(patterns,  text):
+                return 'Found a match!'
+        else:
+                return('Not matched!')
+
+for line in data:
+        print(text_match(line))
+
+
+
+
+4th task
+
+
+
+import re
+
+with open("row.txt", "r",  encoding="utf8") as myfile:
+    data = myfile.read().splitlines()
+
+def text_match(text):
+        patterns = '[A-Z_][a-z_]*'
+        if re.search(patterns,  text):
+                return 'Found a match!'
+        else:
+                return('Not matched!')
+
+for line in data:
+        print(text_match(line))
+        
+        
+5th task
+
+
+
+import re
+
+with open("row.txt", "r",  encoding="utf8") as myfile:
+    data = myfile.read().splitlines()
+
+def text_match(text):
+        patterns = 'a.*b$'
+        if re.search(patterns,  text):
+                return 'Found a match!'
+        else:
+                return('Not matched!')
+
+for line in data:
+        print(text_match(line))
+        
+        
+        
+6th task
+
+import re
+
+with open("row.txt", "r",  encoding="utf8") as myfile:
+    data = myfile.read().splitlines()
+    
+for line in data:
+        print(re.sub("[ ,.]", ":", line))
+        
+
+        
+7th task
+
+import re
+def snake_to_camel(word):
+        return ''.join(x.capitalize() or '_' for x in word.split('_'))
+
+print(snake_to_camel('py_thon_exercises_mfch'))
+                
+                
+8th task 
+
+import re
+
+with open("row.txt", "r",  encoding="utf8") as myfile:
+      data = myfile.read().splitlines()
+
+for line in data:
+      print(re.findall('[A-Z][^A-Z]*', line))
+      
+      
+      
+      
+9th task
+
+import re
+
+with open("row.txt", "r",  encoding="utf8") as myfile:
+      data = myfile.read().splitlines()
+
+for line in data:
+      re.sub(r"(\w)([A-Z])", r"\1 \2", line)
+      
+10th task 
+
+import re
+
+with open("row.txt", "r",  encoding="utf8") as myfile:
+         data = myfile.read().splitlines()
+for line in data:
+        print(re.sub(r'(?<!^)(?=[A-Z])', '_', line).lower())
+        
+        
+
